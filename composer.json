@@ -4,11 +4,15 @@
     "homepage": "https://github.com/bookitcom",
     "license": "MIT",
     "require": {
-        "codeception/codeception": "^2.2",
-        "guzzlehttp/guzzle": "^6.2"
+        "codeception/codeception": "^4.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "ext-json": "*"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "^2.6"
+        "roave/security-advisories": "dev-master",
+        "squizlabs/php_codesniffer": "^2.6",
+        "codeception/module-phpbrowser": "^1.0",
+        "codeception/module-asserts": "^1.1"
     },
     "autoload": {
         "psr-4": {

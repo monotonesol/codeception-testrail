@@ -84,7 +84,7 @@ class Connection
             ],
         ];
 
-        if (!empty($payload) && $verb == 'POST') {
+        if (!empty($payload) && $verb === 'POST') {
             $opts['json'] = $payload;
         }
 

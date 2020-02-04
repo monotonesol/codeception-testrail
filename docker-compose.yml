@@ -1,19 +1,9 @@
-version: '2'
-
+version: '3'
 services:
-  php:
-    image: bookitapparch/bacon-cli:5.6
-    environment:
-      - "APP_ENV=dev"
+  php-rail:
+    image: prooph/composer:7.2
+    container_name: php-rail
     volumes:
-      - ./:/var/www
-      - ./etc/ssh:/root/.ssh
-      - composercache:/root/.composer
-    dns:
-      - 172.19.1.11
-      - 172.16.1.210
-      - 172.16.1.211
-
-volumes:
-  composercache:
-    external: true
+      - ./:/app
+    #    tty: true
+    entrypoint: /bin/sh

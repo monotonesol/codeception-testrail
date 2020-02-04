@@ -5,6 +5,7 @@ use BookIt\Codeception\TestRail\Connection;
 use BookIt\Codeception\TestRail\Exception\CallException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
+use phpDocumentor\Reflection\Types\Void_;
 use Psr\Http\Message\StreamInterface;
 
 class ConnectionTest extends \PHPUnit_Framework_TestCase
@@ -14,12 +15,12 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
      */
     protected $target;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->target = new Connection();
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         unset($this->target);
     }
